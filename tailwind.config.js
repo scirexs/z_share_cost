@@ -1,14 +1,17 @@
-/** @type {import('tailwindcss').Config} */
+/** @type {import("tailwindcss").Config} */
 export default {
-  content: ['./src/**/*.{html,js,svelte,ts}'],
-  purge: ['./src/**/*.{html,js,svelte,ts}'],
+  content: ["./src/**/*.{html,js,svelte,ts}"],
+  purge: ["./src/**/*.{html,js,svelte,ts}"],
   theme: {
     extend: {
+      fontFamily: {
+        "nsbold": ["NSJP-Centered", "sans-serif"],
+      },
       colors: {
-        serenity: '#E2E8EF',
-        teal: '#03AB99',
-        sage: '#7FA091',
-        forest: '#01413A'
+        serenity: "#E2E8EF",
+        teal: "#03AB99",
+        sage: "#7FA091",
+        forest: "#01413A"
       },
     }
   },

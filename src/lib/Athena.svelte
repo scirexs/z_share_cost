@@ -52,7 +52,7 @@
   const onTabs = layoutTabs({mainpos: EStyleFlexAlignMainAxis.stretch, flexibility: EStyleFlexibility.auto, others: "*:grow *:text-center"});
   const forTabsNonActive = styleTabs({size: EStyleSize.xl, mergin: "mx-5", bdcolor: "border-sage", txtcolor: "text-sage", others: "cursor-default"});
   const forTabsActive = styleActive({bdcolor: "border-forest", txtcolor: "text-forest", txtbold: "font-bold", others: "w-full cursor-default"});
-  const forTabsFrame = styleFrame({bdcolor: "border-sage", others: "px-5 py-2"});
+  const forTabsFrame = styleFrame({bdcolor: "border-sage", others: "px-5 py-2 h-[calc(100dvh-160px)] max-h-[calc(100dvh-160px)] overflow-y-auto overscroll-y-contain"}); // koko
   const forButtonNext = mergeStyle(stdButton, {bdwidth: "border-2", bdcolor: "border-teal", others: "relative grow basis-2/3"});
   const forButtonBack = styleButton({size: EStyleSize.md, bgcolor: "bg-serenity", bdwidth: "border-2", bdcolor: "border-sage", txtcolor: "text-sage", others: "relative grow basis-1/3"});
   const forButtonAll = mergeStyle(stdToggle, {bgcolor: "bg-serenity", bdwidth: "border-2", bdcolor: "border-teal",  txtcolor: "text-teal"});

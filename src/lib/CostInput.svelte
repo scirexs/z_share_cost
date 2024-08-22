@@ -29,7 +29,7 @@
 
   /*** import ***/
   import Descriptor from "$lib/_Descriptor.svelte";
-  import TextBox from "$lib/_TextBox.svelte";
+  import TextBox, { InputMode } from "$lib/_TextBox.svelte";
   import Select, { getSelectItem } from "$lib/_Select.svelte";
   import SelectPanel from "$lib/SelectPanel.svelte";
 	import Button from "$lib/_Button.svelte";
@@ -93,7 +93,7 @@
   <Select items={selectItems} bind:value={payId} placeholder="Select name" style={forSelect} />
 </Descriptor>
 <Descriptor label="Amount" style={forDescriptor} bind:hint={amount_valid}>
-  <TextBox bind:value={amount} style={forTextBox} onChange={isNumber}>
+  <TextBox bind:value={amount} style={forTextBox} onChange={isNumber} inputMode={InputMode.money}>
     {#snippet prefix()}
       <span class={prefixStyle}>￥</span>
     {/snippet}

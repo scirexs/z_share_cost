@@ -67,7 +67,7 @@
     </div>
   </div>
 {/snippet}
-<Accordion label="Details" isOpen={true} style={forAccordion} contentSize={"px-4 pt-2 pb-3 overflow-y-auto h-[calc(100lvh-600px)]"}>
+<Accordion label="Details" isOpen={true} style={forAccordion} contentSize={"px-4 pt-2 pb-3 overflow-y-auto"}> <!-- h-[calc(100lvh-600px)]-->
   <div class="flex flex-col gap-2 divide-y divide-sage">
     {#each txns as txn (txn.txnId)}
       {@render item(txn)}

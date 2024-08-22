@@ -25,7 +25,7 @@
   }): StylePartsPartial { return getPartsStyle({size, mergin, bgcolor, border, bdwidth, bdcolor, bdround, txtcolor, txtbold, txtitalic, others}); }
   const fixedStyle: string = "h-fit";
   const flexStyle: string = "inline-flex flex-row flex-nowrap justify-center items-center gap-1";
-  const labelStyle: string = "-mb-0.5 text-forest text-base";
+  const labelStyle: string = "-mb-1 text-forest text-base font-nsbold";
   const childStyle: string = "-mb-1";
   const hintStyle: string = "text-xs text-forest";
 
