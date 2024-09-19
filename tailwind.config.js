@@ -1,17 +1,17 @@
 /** @type {import("tailwindcss").Config} */
 export default {
-  content: ["./src/**/*.{html,js,svelte,ts}"],
-  purge: ["./src/**/*.{html,js,svelte,ts}"],
+  content: ["./src/**/*.{html,js,svelte,ts}", "./lib/style.ts", "./lib/assy/*.svelte"],
   theme: {
     extend: {
       fontFamily: {
         "nsbold": ["NSJP-Centered", "sans-serif"],
       },
       colors: {
-        serenity: "#E2E8EF",
-        teal: "#03AB99",
-        sage: "#7FA091",
-        forest: "#01413A"
+        canvas: "var(--color-canvas)",
+        active: "var(--color-active)",
+        inactive: "var(--color-inactive)",
+        charline: "var(--color-charline)",
+        invalid: "var(--color-invalid)",
       },
     }
   },

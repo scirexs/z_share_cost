@@ -1,46 +1,24 @@
-<script context="module" lang="ts">
+<script module lang="ts">
   /*** Export ***/
-  // export type Props = {
-  //   title: string,
-  //   contents: Snippet<{subtitle: string, items: {label: string, src: string}[]}[]>,
-  //   pages: {title: string, contents: Snippet}[],
-  // };
-	export const ListItem = createRawSnippet((texta: () => number) => {
-		return {
-			render: () => `
-				<li>${texta()}</li>
-			`,
-			setup: (li) => {
-				$effect(() => {
-					li.textContent = `${texta()}`;
-				});
-			}
-		};
-	});
-  /*** Styling ***/
+
   /*** Others ***/
+
   /*** import ***/
-  // import type {Snippet} from "svelte";
-	import { createRawSnippet } from 'svelte';
+  import TextField from "./comp/_TextField.svelte";
+	import { emptyTest } from "./util";
 </script>
 
 <!---------------------------------------->
 
 <script lang="ts">
-  // const { title, contents }: Props = $props();
-  let foo = test;
-
-  /*** Styling ***/
-  /*** Initialize ***/
-  /*** Sync ***/
-  /*** Others ***/
-  /*** Handle events ***/
+  let test = $state.raw(emptyTest);
+  function validation(value: string, auto?: boolean): [boolean, string?] {
+    const num = Number.parseInt(value.trim());
+    if (Number.isNaN(num)) { return [false, "Amount must be number"]; }
+    if (num <= 0)          { return [false, "Amount must be greater than 0"]; }
+    if (num > 1000000)     { return [false, "Amount must be less than a million"]; }
+    return [true];
+  }
 </script>
 
-<!---------------------------------------->
-
-{@render foo()}
-
-{#snippet test()}
-  <p>this is test</p>
-{/snippet}
+<TextField label="Test" bind:test {validation} />

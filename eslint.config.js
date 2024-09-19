@@ -4,7 +4,7 @@ import svelte from 'eslint-plugin-svelte';
 import prettier from 'eslint-config-prettier';
 import globals from 'globals';
 
-/** @type {import('eslint').Linter.FlatConfig[]} */
+/** @type {import('eslint').Linter.Config[]} */
 export default [
 	js.configs.recommended,
 	...ts.configs.recommended,
@@ -26,6 +26,12 @@ export default [
 				parser: ts.parser
 			}
 		}
+	},
+	{
+		files: ["src/lib/util.ts"],
+		rules: {
+			"@typescript-eslint/no-explicit-any": "off",
+		},
 	},
 	{
 		ignores: ['build/', '.svelte-kit/', 'dist/']

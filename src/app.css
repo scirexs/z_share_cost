@@ -26,7 +26,17 @@
     font-display: swap;
     ascent-override: 95%;
   }
+  :root {
+    --color-canvas: #e2e8ef;
+    --color-active: #03ab99;
+    --color-inactive: #7fa091;
+    --color-charline: #01413a;
+    --color-invalid: #ab0315;
+  }
   html {
     font-family: "NotoSansJP", ui-sans-serif, system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI", Roboto, "Helvetica Neue", Arial, "Noto Sans", sans-serif, "Apple Color Emoji", "Segoe UI Emoji", "Segoe UI Symbol", "Noto Color Emoji";
+  }
+  body {
+    background-color: var(--color-canvas);
   }
 }
